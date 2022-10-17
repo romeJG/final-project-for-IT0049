@@ -1,7 +1,6 @@
-###################
+<h2>
 Final Project for IT0049
-###################
-
+</h2><br><br>
 Members
 1. Espero, Jessielyn Doris <br>
 2. Guillermo, Justine Rome<br>
