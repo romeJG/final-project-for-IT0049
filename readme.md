@@ -34,7 +34,7 @@ Mr. Garick Ollivander, the owner of the Ollivander's Wands located in Diagon All
    <tbody>
       <tr>
          <td>1. Login/Registration	</td>
-         <td>- The registration should include email verification</td>
+         <td>The registration should include email verification</td>
       </tr>
       <tr>
          <td>2. File Upload	</td>
@@ -53,7 +53,7 @@ Mr. Garick Ollivander, the owner of the Ollivander's Wands located in Diagon All
       </tr>
       <tr>
          <td>5. CRUD Operation</td>
-         <td>Create, Read, Update, Delete i think u know that already -_-</td>
+         <td>Create, Read, Update, Delete i think u know that already ( ´･･)ﾉ(._.`)</td>
       </tr>
       </tr>
       <tr>
