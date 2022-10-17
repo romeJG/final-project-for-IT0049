@@ -1,7 +1,7 @@
 <h2>
 Final Project for IT0049
 </h2><br><br>
-Members
+Members:<br>
 1. Espero, Jessielyn Doris <br>
 2. Guillermo, Justine Rome<br>
 3. Que, Joseph Ross<br>
