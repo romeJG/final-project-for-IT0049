@@ -1,71 +1,39 @@
 ###################
-What is CodeIgniter
+Final Project for IT0049
 ###################
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+Members
+1. Espero, Jessielyn Doris
+2. Guillermo, Justine Rome
+3. Que, Joseph Ross
+4. Valmadrid, Genome Jacob
 
-*******************
-Release Information
-*******************
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+Project details
+1.) Login/Registration	- The registration should include email verification
+2.) File Upload	
+3.) Database Connection	
+4.) Sessions (you can use the Cart class but is not recommended)	
+5.) CRUD Operations	
+6.) ALL INPUT FIELDS SHOULD HAVE FORM VALIDATION
+7.) Create URL Routing	
 
-**************************
-Changelog and New Features
-**************************
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+PROJECT SPECIFICATIONS AND DETAILS:	
+Mr. Garick Ollivander, the owner of the Ollivander's Wands located in Diagon Alley, London, has requested you to create a web application for his wand shop. This web application needs to have the following:
 
-*******************
-Server Requirements
-*******************
+A customer registration form that has the following fields: last name, first name, gender, address, birthday, cell number, email (which also serves as the username), and password.
+A customer information page where the user can edit and delete/deactivate their account.
+A product page that displays all the products sold by the shop (specifically wands used by wizards and witches).
+The capability or add items to the customer cart and the ability to check their carts out. (The payment will just be a mock-up, it will be saved in the database but will not have any form of payment acceptance)
+An admin page that can edit, add, archive, and update products displayed in the page.
+An admin page that can view and deactivate customers.
+A transactions page, which can be accessed by the admin only, that can display all the transactions of the shop.
+An about page that displays the information about the shop, the owner, and the developers of the application
+Deadline:	November 30, 2022
+Mode of Activity:	GROUP with at most 4 members each. (A group logo must be included in your project, it must be displayed in the browser tab as well as in all of your application's web pages)
+Submission :	
+What to submit: a zipped file that contains the project folder and the exported SQL file, and a notepad file (README) that contains instructions on how to load your application (e.g.: the default controller name or the URL to be typed to access your application). ANYONE from the group can submit, only one will submit.
 
-PHP version 5.6 or newer is recommended.
-
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
-
-************
-Installation
-************
-
-Please see the `installation section <https://codeigniter.com/userguide3/installation/index.html>`_
-of the CodeIgniter User Guide.
-
-*******
-License
-*******
-
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
-
-*********
-Resources
-*********
-
--  `User Guide <https://codeigniter.com/docs>`_
--  `Contributing Guide <https://github.com/bcit-ci/CodeIgniter/blob/develop/contributing.md>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
-
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+File Submission Format :	File Type : .zip File name : GROUP NAME.zip
+Contents of Zip file:	- application directory (the whole CodeIgniter folder of your web application), export file of your database, a README file
