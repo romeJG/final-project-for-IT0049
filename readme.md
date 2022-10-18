@@ -1,6 +1,6 @@
 <h1>
 Final Project for IT0049
-</h1><br><br>
+</h1>
 <b>
 Members:</b><br>
 1. Espero, Jessielyn Doris <br>
