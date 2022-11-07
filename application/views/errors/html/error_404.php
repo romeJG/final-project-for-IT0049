@@ -18,7 +18,7 @@ $ci->load->helper('url');
 	}
 
 	body {
-		background-image: url(<?= base_url(); ?>assets/404/woods.jpg);
+		background-image: url("<?php echo base_url(); ?>assets/404/woods.jpg");
 		background-color: black;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -74,12 +74,29 @@ $ci->load->helper('url');
 		animation: glow 2s ease-in-out infinite alternate;
 	}
 
+	.glow-h:hover {
+		color: #fff;
+		text-align: center;
+		font-size: 1.2rem;
+		-webkit-animation: glow 0.5s ease-in-out infinite alternate;
+		-moz-animation: glow 0.5s ease-in-out infinite alternate;
+		animation: glow 0.5s ease-in-out infinite alternate;
+		;
+	}
+
+	.glow-h {
+		color: #fff;
+		text-align: center;
+		margin-top: 3rem;
+		font-size: 1.2rem;
+	}
+
 	@-webkit-keyframes glow {
 		from {
 			text-shadow:
 				0 0 10px #fff,
-				0 0 20px #89cbff,
-				0 0 30px #89cbff,
+				0 0 20px #fff,
+				0 0 30px #fff,
 				0 0 40px #89cbff,
 				0 0 50px #89cbff,
 				0 0 60px #89cbff,
@@ -118,7 +135,7 @@ $ci->load->helper('url');
 				<div class="number glow">404</div>
 				<div class="text">Looks like you got lost</div>
 				<a href="<?= base_url(); ?>">
-					<div class="button glow">Go Home</div>
+					<div class="button glow-h">Go Home</div>
 				</a>
 			</div>
 		</div>
