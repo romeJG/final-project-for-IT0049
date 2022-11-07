@@ -1,0 +1,10 @@
+.navbar {
+    padding: 1rem;
+    padding-left: 17%;
+    padding-right: 17%;
+    backdrop-filter: blur(5px);
+}
+
+.nav-item {
+    margin-left: 20%;
+}

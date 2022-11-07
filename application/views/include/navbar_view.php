@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark" style="padding: 1rem; padding-left: 3rem; padding-right: 3rem;">
+<link rel="stylesheet" href="<?= base_url('assets/css/navbar.css'); ?>">
+<nav class="navbar navbar-expand-lg navbar navbar-dark sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <h1>Lukso</h1>
@@ -32,8 +33,7 @@
                 </li> -->
             </ul>
             <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <button class="btn btn-success" type="submit">Login</button>
             </form>
         </div>
     </div>
