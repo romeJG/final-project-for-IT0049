@@ -91,7 +91,7 @@ $ci->load->helper('url');
 		font-size: 1.2rem;
 	}
 
-	@-webkit-keyframes glow {
+	@keyframes glow {
 		from {
 			text-shadow:
 				0 0 10px #fff,
