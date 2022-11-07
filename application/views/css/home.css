@@ -1,0 +1,10 @@
+.body_container {
+    background-color: rgb(14, 14, 14);
+    padding-right: 3rem;
+    padding-left: 3rem;
+    height: 100vh;
+}
+
+body {
+    color: white;
+}
