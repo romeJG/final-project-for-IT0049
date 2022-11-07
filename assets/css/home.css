@@ -1,6 +1,24 @@
 .body_container {
-    background-color: rgb(66, 66, 66);
+    background-color: rgb(22, 22, 22);
     text-align: center;
-    padding-right: 3rem;
-    padding-left: 3rem;
+    padding-right: 20rem;
+    padding-left: 20rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    height: 100%;
+    color: white;
+    overflow-y: hidden;
+}
+
+.card-img-top {
+    padding: 10%;
+}
+
+.description {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.item {
+    margin-right: 1rem;
 }
