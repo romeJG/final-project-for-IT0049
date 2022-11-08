@@ -4,7 +4,6 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
-    backdrop-filter: blur(2px);
     overflow-x: hidden;
 
 }
@@ -42,6 +41,9 @@ body {
     height: 100%;
     z-index: -1;
     position: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 
 
 }
