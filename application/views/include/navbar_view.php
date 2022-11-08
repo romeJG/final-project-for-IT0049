@@ -33,7 +33,8 @@
                 </li> -->
             </ul>
             <form class="d-flex">
-                <button class="btn btn-success" type="submit">Login</button>
+                <button class="btn btn-outline-success" type="submit" style>Login</button>
+                <button class="btn btn-success" type="submit">Signup</button>
             </form>
         </div>
     </div>
