@@ -1,25 +1,3 @@
-body {
-    background-image: url("../home/xmass-hogwarts.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    overflow-x: hidden;
-
-}
-
-.body_container {
-    /* background-color: rgb(22, 22, 22); */
-    text-align: center;
-    padding-right: 18%;
-    padding-left: 18%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    height: 100%;
-    color: white;
-    overflow-x: hidden;
-}
-
 .card-img-top {
     padding: 10%;
 }
@@ -65,61 +43,6 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
-.divider {
-    /* minor cosmetics */
-    display: table;
-    font-size: 24px;
-    text-align: center;
-    width: 75%;
-    /* divider width */
-    margin: 40px auto;
-    /* spacing above/below */
-}
-
-.divider span {
-    display: table-cell;
-    position: relative;
-}
-
-.divider span:first-child,
-.divider span:last-child {
-    width: 50%;
-    top: 13px;
-    /* adjust vertical align */
-    -moz-background-size: 100% 2px;
-    /* line width */
-    background-size: 100% 2px;
-    /* line width */
-    background-position: 0 0, 0 100%;
-    background-repeat: no-repeat;
-}
-
-.divider span:first-child {
-    /* color changes in here */
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(#fff));
-    background-image: -webkit-linear-gradient(180deg, transparent, #fff);
-    background-image: -moz-linear-gradient(180deg, transparent, #fff);
-    background-image: -o-linear-gradient(180deg, transparent, #fff);
-    background-image: linear-gradient(90deg, transparent, #fff);
-}
-
-.divider span:nth-child(2) {
-    color: #fff;
-    padding: 0px 50px;
-    width: auto;
-    white-space: nowrap;
-
-
-}
-
-.divider span:last-child {
-    /* color changes in here */
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(transparent));
-    background-image: -webkit-linear-gradient(180deg, #fff, transparent);
-    background-image: -moz-linear-gradient(180deg, #fff, transparent);
-    background-image: -o-linear-gradient(180deg, #fff, transparent);
-    background-image: linear-gradient(90deg, #fff, transparent);
-}
 
 .hr-div {
     color: #fff;

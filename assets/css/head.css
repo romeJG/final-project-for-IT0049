@@ -1,0 +1,21 @@
+body {
+    background-image: url("../home/xmass-hogwarts.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow-x: hidden;
+
+}
+
+.body_container {
+    /* background-color: rgb(22, 22, 22); */
+    text-align: center;
+    padding-right: 18%;
+    padding-left: 18%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    height: 100%;
+    color: white;
+    overflow-x: hidden;
+}
