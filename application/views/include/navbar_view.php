@@ -35,8 +35,8 @@
                 </li> -->
             </ul>
             <div class="d-flex">
-                <a class="btn btn-outline-dark" href="<?= base_url('signup_controller'); ?>" type="submit" style>Login</a>
-                <a class="btn btn-dark" href="<?= base_url('signup_controller'); ?>" type="submit">Signup</a>
+                <a class="btn-nav btn btn-outline-dark" href="<?= base_url('signup_controller'); ?>" type="submit" style>Login</a>
+                <a class="btn-nav btn btn-dark" href="<?= base_url('signup_controller'); ?>" type="submit">Signup</a>
             </div>
         </div>
     </div>

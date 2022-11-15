@@ -1,23 +1,46 @@
-.snow_container {
-    background-image: url('../home/snow2.png'), url('../home/snow3.png');
-    animation: snow 30s linear infinite;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    position: fixed;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-
-
+.body_container {
+    padding-left: 30%;
+    padding-right: 30%;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-@keyframes snow {
-    0% {
-        background-position: 0px 0px, 0px 0px, 0px 0px;
-    }
+.form-container {}
 
-    100% {
-        background-position: 500px 1000px, 400px 400px, 300px 300px;
-    }
+.bg {
+
+    padding: 2% 10% 10% 10%;
+    border-radius: 10px;
+    background-color: antiquewhite;
+}
+
+
+.bday-input {
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 3px 5px;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+    width: 190px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.s-head {
+    margin-bottom: 2%;
+    font-size: 3rem;
+}
+
+.s-desc {
+    margin-bottom: 2%;
+    font-size: 1rem;
+}
+
+.form-button {
+    margin-top: 10%;
+    width: 60%;
 }
