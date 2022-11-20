@@ -118,7 +118,7 @@ class Signup extends CI_Controller
             <body>
                 <h2>Thank you for Registering.</h2>
                 <p>Please click the link below to activate your account.</p>
-                <h4><a href='" . base_url() . "singup/activate/" . $id . "/" . $otp . "'>Activate My Account</a></h4>
+                <h4><a href='" . base_url() . "signup/activate/" . $id . "/" . $otp . "'>Activate My Account</a></h4>
             </body>
             </html>
             ");
@@ -137,25 +137,28 @@ class Signup extends CI_Controller
 
     public function activate()
     {
+        //load database for checking if otp is same in DB
+        $this->load->database();
+
         $id =  $this->uri->segment(3);
         $code = $this->uri->segment(4);
 
         //fetch user details
-        $user = $this->users_model->getUser($id);
+        $user = $this->signup_model->getUser($id);
 
         //if code matches
         if ($user['code'] == $code) {
             //update user active status
             $data['active'] = true;
-            $query = $this->users_model->activate($data, $id);
+            $query = $this->signup_model->activate($data, $id);
 
-            if ($query) {
-                $this->session->set_flashdata('message', 'User activated successfully');
-            } else {
-                $this->session->set_flashdata('message', 'Something went wrong in activating account');
-            }
+            // if ($query) {
+            //     $this->session->set_flashdata('message', 'User activated successfully');
+            // } else {
+            //     $this->session->set_flashdata('message', 'Something went wrong in activating account');
+            // }
         } else {
-            $this->session->set_flashdata('message', 'Cannot activate account. Code didnt match');
+            // $this->session->set_flashdata('message', 'Cannot activate account. Code didnt match');
         }
 
         redirect('');
