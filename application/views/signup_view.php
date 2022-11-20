@@ -12,9 +12,15 @@
             <div class="s-head">
                 Signup
             </div>
-            <div class="s-desc">
-                Enter your Information.
-            </div>
+            <?php
+            if (validation_errors()) {
+            ?>
+                <div class="alert alert-danger">
+                    <?php echo validation_errors(); ?>
+                </div>
+            <?php
+            } ?>
+
             <?php echo form_open_multipart('Signup/processSignup'); ?>
             <form name="signupForm">
                 <div class="row">
@@ -38,7 +44,7 @@
                 </div>
                 <div class="row">
                     <div class="mb-3 col">
-                        <input type="date" class="form-control" id="birthday" name="birthday" placeholder="Birth Day" value="<?php echo set_value('birthday'); ?>">
+                        <input type="date" class="form-control" id="birthday" name="birthday" placeholder="Birth Day:" value="<?php echo set_value('birthday'); ?>">
                     </div>
                     <div class="mb-3 col">
                         <select id="gender" name="gender" placeholder="Gender" value="<?php echo set_value('gender'); ?>">
@@ -51,7 +57,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <input type="text" class="form-control" id="address" name="address" aria-describedby="emailHelp" placeholder="Address" value="<?php echo set_value(''); ?>">
+                    <input type="text" class="form-control" id="address" name="address" aria-describedby="emailHelp" placeholder="Address" value="<?php echo set_value('address'); ?>">
                 </div>
                 <div class="row">
                     <div class="mb-3 col">

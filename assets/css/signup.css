@@ -51,3 +51,9 @@ select {
     border-radius: 4px;
     background-color: white;
 }
+
+input[type="date"]:before {
+    content: attr(placeholder) !important;
+    color: rgb(130, 130, 130);
+    margin-right: 0.5em;
+}
