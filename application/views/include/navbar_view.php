@@ -12,7 +12,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link <?php if ($active == "home") echo "active" ?>" aria-current="page" href="<?= base_url('Home_controller'); ?>">Home</a>
+                    <a class="nav-link <?php if ($active == "home") echo "active" ?>" aria-current="page" href="<?= base_url(''); ?>">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php if ($active == "store") echo "active" ?>" href="#">Store</a>
@@ -35,8 +35,8 @@
                 </li> -->
             </ul>
             <div class="d-flex">
-                <a class="btn-nav btn btn-outline-dark" href="<?= base_url('signup_controller'); ?>" type="submit" style>Login</a>
-                <a class="btn-nav btn btn-dark" href="<?= base_url('signup_controller'); ?>" type="submit">Signup</a>
+                <a class="btn-nav btn btn-outline-dark" href="<?= base_url('login'); ?>" type="submit" style>Login</a>
+                <a class="btn-nav btn btn-dark" href="<?= base_url('signup'); ?>" type="submit">Signup</a>
             </div>
         </div>
     </div>

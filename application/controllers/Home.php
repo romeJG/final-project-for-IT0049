@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Signup_controller extends CI_Controller
+class Home extends CI_Controller
 {
     public function __construct()
     {
@@ -12,10 +12,10 @@ class Signup_controller extends CI_Controller
 
     public function index()
     {
-        $data['title'] = "Sign Up | Lukso";
-        $data['active'] = "signup";
+        $data['title'] = "Lukso Wands";
+        $data['active'] = "home";
         $this->load->view('include/header_view', $data);
         $this->load->view('include/navbar_view', $data);
-        $this->load->view('signup_view');
+        $this->load->view('home_view');
     }
 }
