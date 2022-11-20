@@ -33,6 +33,8 @@ class Signup extends CI_Controller
             'smptp_timeout' => 5,
             'smtp_port' => 465,
             'smtp_user' => 'luksowands@gmail.com',
+            //app password from google "app passwords"
+            //account real password: "luksowands12345678"
             'smtp_pass' => 'tzweisaqfiohkjpw',
             'charset' => 'utf-8',
             'mailtype' => 'html',
@@ -44,6 +46,7 @@ class Signup extends CI_Controller
         //setup email to send
         $this->email->set_newline("\r\n");
         $this->email->set_crlf("\r\n");
+        //gets the email in the input.
         $this->email->to($this->input->post('email'));
         $this->email->from("otp@luksowands.com");
         $this->email->subject("LUKSO WANDS OTP");
