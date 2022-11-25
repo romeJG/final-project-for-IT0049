@@ -115,10 +115,6 @@ Status and Objectives Progress Summary
       </tr>
       <tr>
          <td>❌</td>
-         <td>Admin panel Edit (items)</td>
-      </tr>
-      <tr>
-         <td>❌</td>
          <td>Admin panel Edit (user/items)</td>
       </tr>
       <tr>
