@@ -3,10 +3,10 @@ Final Project for IT0049
 </h1>
 <b>
 Members:</b><br>
-1. Espero, Jessielyn Doris <br>
-2. Guillermo, Justine Rome<br>
-3. Que, Joseph Ross<br>
-4. Valmadrid, Genome Jacob<br>
+- Espero, Jessielyn Doris 
+- Guillermo, Justine Rome
+- Que, Joseph Ross
+- Valmadrid, Genome Jacob
 <br>
 <br>
 <h2>PROJECT SPECIFICATIONS AND DETAILS:	</h2>
