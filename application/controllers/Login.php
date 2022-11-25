@@ -11,6 +11,7 @@ class Login extends CI_Controller
         $this->load->library('form_validation');
         $this->load->library('session');
         $this->load->model('login_model');
+        $this->load->library('session');
     }
     public function index()
     {
@@ -42,9 +43,12 @@ class Login extends CI_Controller
             $this->index();
         } else {
             if ($this->login_model->isAdmin($data['email'])) {
-                echo "is admin";
+                $this->session->set_userdata(array('isAdmin' => true));
+                echo "is admin?" . $this->session->userdata('isAdmin');
             } else {
-                echo "USER";
+
+                $this->session->set_userdata(array('isAdmin' => false));
+                echo "is admin?" . $this->session->userdata('isAdmin');
             }
         }
     }
