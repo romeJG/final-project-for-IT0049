@@ -91,6 +91,10 @@ Progress Summary
       </tr>
       <tr>
          <td>✅</td>
+         <td>Favicon</td>
+      </tr>
+      <tr>
+         <td>✅</td>
          <td>Working Signup page</td>
       </tr>
       <tr>

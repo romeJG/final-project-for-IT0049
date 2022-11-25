@@ -12,6 +12,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <link rel=" stylesheet" href="<?= base_url('assets/css/head.css'); ?>">
+    <link rel="icon" href="<?= base_url() ?>/assets/home/lukso_favicon.png" type="image/gif">
+
     <title><?php echo $title ?></title>
 </head>
 
