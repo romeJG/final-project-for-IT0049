@@ -95,7 +95,7 @@ Status and Objectives Progress Summary
       </tr>
       <tr>
          <td>✅</td>
-         <td>Working Login page</td>
+         <td>Working Login page for admin/user</td>
       </tr>
       <tr>
          <td>✅</td>
@@ -144,6 +144,10 @@ Status and Objectives Progress Summary
       <tr>
          <td>❌</td>
          <td>User Checkout cart</td>
+      </tr>
+      <tr>
+         <td>❌</td>
+         <td>Store Page (add pagination if possible)</td>
       </tr>
       <tr>
          <td>🎉</td>
