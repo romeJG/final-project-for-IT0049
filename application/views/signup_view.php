@@ -1,7 +1,6 @@
 <!-- linking the css file -->
 <div class="snow_container"></div>
 <link rel="stylesheet" href="<?= base_url('assets/css/signup.css'); ?>">
-<link rel="stylesheet" href="<?= base_url('assets/css/style.css'); ?>">
 <link rel="stylesheet" href="<?= base_url('assets/fonts/material-design-iconic-font/css/material-design-iconic-font.css'); ?>">
 
 <div class="body_container">

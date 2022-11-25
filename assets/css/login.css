@@ -1,0 +1,23 @@
+.body_container {
+    padding-left: 35%;
+    padding-right: 35%;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.bg {
+
+    padding: 2% 10% 10% 10%;
+    border-radius: 10px;
+    background-color: antiquewhite;
+}
+
+.s-head {
+    margin-bottom: 2%;
+    font-size: 3rem;
+}
+
+.input-cont {
+    margin-bottom: 2%;
+}
