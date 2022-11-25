@@ -8,8 +8,7 @@ class Signup extends CI_Controller
         //never load libraries or models in here.
         parent::__construct();
         $this->load->helper(array('form', 'url'));
-        $this->load->library('form_validation');
-        $this->load->library('session');
+        $this->load->library(array('form_validation', 'session'));
         $this->load->model('signup_model');
     }
 
