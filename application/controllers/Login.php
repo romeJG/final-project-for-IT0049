@@ -34,7 +34,7 @@ class Login extends CI_Controller
             'password' => $this->input->post('password')
         );
 
-
+        //this rule will do a call back on form submission checks if email exists and try to login the user.
         $this->form_validation->set_rules('email', 'Email', 'required|callback_emailExist|callback_login', array('emailExist' => 'This Email does not exist', 'login' => 'Wrong Password'));
         $this->form_validation->set_rules('password', 'Password', 'required');
 
