@@ -2,14 +2,14 @@
 Final Project for IT0049
 </h1>
 <b>
-Members:</b><br>
+👷🏾‍♂️ Members:</b><br>
 1. Espero, Jessielyn Doris <br>
 2. Guillermo, Justine Rome<br>
 3. Que, Joseph Ross<br>
 4. Valmadrid, Genome Jacob<br>
 <br>
 <br>
-<h2>PROJECT SPECIFICATIONS AND DETAILS:	</h2>
+<h2>PROJECT SPECIFICATIONS AND DETAILS 🕵🏾‍♂️</h2>
 	
 Mr. Garick Ollivander, the owner of the Ollivander's Wands located in Diagon Alley, London, has requested you to create a web application for his wand shop. This web application needs to have the following:
 
@@ -27,8 +27,8 @@ Mr. Garick Ollivander, the owner of the Ollivander's Wands located in Diagon All
 <table>
    <thead>
       <tr>
-         <th>PROJECT REQUIREMENTS :</th>
-         <th>A web application that conforms to the following:</th>
+         <th>PROJECT REQUIREMENTS ✅</th>
+         <th>A web application that conforms to the following 💻</th>
       </tr>
    </thead>
    <tbody>
