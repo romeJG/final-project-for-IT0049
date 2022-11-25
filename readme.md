@@ -74,3 +74,81 @@ Mr. Garick Ollivander, the owner of the Ollivander's Wands located in Diagon All
       </tr>
    </tbody>
 </table>
+<h1>
+Status and Objectives Progress Summary
+</h1>
+<table>
+   <thead>
+      <tr>
+         <th>Status</th>
+         <th>Objective</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>✅</td>
+         <td>Home page</td>
+      </tr>
+      <tr>
+         <td>✅</td>
+         <td>Working Signup page</td>
+      </tr>
+      <tr>
+         <td>✅</td>
+         <td>Working Login page</td>
+      </tr>
+      <tr>
+         <td>✅</td>
+         <td>Email verification on signup</td>
+      </tr>
+      <tr>
+         <td>✅</td>
+         <td>404 page</td>
+      </tr>
+      <tr>
+         <td>✅</td>
+         <td>Database Setup (admin/user)</td>
+      </tr>
+      <tr>
+         <td>❌</td>
+         <td>Admin panel View (user/items)</td>
+      </tr>
+      <tr>
+         <td>❌</td>
+         <td>Admin panel Edit (items)</td>
+      </tr>
+      <tr>
+         <td>❌</td>
+         <td>Admin panel Edit (user/items)</td>
+      </tr>
+      <tr>
+         <td>❌</td>
+         <td>Admin panel Delete (user/items)</td>
+      </tr>
+      <tr>
+         <td>❌</td>
+         <td>User Profile</td>
+      </tr>
+      <tr>
+         <td>❌</td>
+         <td>User Edit Profile</td>
+      </tr>
+      <tr>
+         <td>❌</td>
+         <td>User Change password</td>
+      </tr>
+      <tr>
+         <td>❌</td>
+         <td>User Add to cart</td>
+      </tr>
+      <tr>
+         <td>❌</td>
+         <td>User Checkout cart</td>
+      </tr>
+      <tr>
+         <td>🎉</td>
+         <td>more to add</td>
+      </tr>
+      
+   </tbody>
+</table>
