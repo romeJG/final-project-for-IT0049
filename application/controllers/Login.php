@@ -8,10 +8,8 @@ class Login extends CI_Controller
         //never load libraries or models in here.
         parent::__construct();
         $this->load->helper(array('form', 'url'));
-        $this->load->library('form_validation');
-        $this->load->library('session');
+        $this->load->library(array('form_validation', 'session'));
         $this->load->model('login_model');
-        $this->load->library('session');
     }
     public function index()
     {
@@ -27,8 +25,7 @@ class Login extends CI_Controller
 
         $this->load->database();
 
-        //gets the post value of the email and password
-
+        //gets the post value of the email and password in the html input
         $data = array(
             'email' => $this->input->post('email'),
             'password' => $this->input->post('password')
@@ -47,9 +44,9 @@ class Login extends CI_Controller
                 $this->session->set_userdata(array('isAdmin' => true));
                 $this->session->set_userdata(array('email' => $data['email']));
                 echo "is admin?" . $this->session->userdata('isAdmin');
+                redirect('admin');
             } else {
                 //sets the value to false cuz its a user
-
                 $this->session->set_userdata(array('isAdmin' => false));
                 $this->session->set_userdata(array('email' => $data['email']));
                 echo "is admin?" . $this->session->userdata('isAdmin');

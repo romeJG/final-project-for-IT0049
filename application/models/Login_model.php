@@ -13,19 +13,21 @@ class Login_model extends CI_Model
     {
         //Gets the admin if there is a match on $ email
         $this->db->where('email', $email);
-        $query = $this->db->get('admins');
+        $adminquery = $this->db->get('admins');
 
         //Gets the user if there is a match on $ email
         $this->db->where('email', $email);
-        $query2 = $this->db->get('users');
+        $userquery = $this->db->get('users');
 
-        //checks if there is a row returned by the $query and $query2
-        if ($query->num_rows() > 0 || $query2->num_rows() > 0) {
+        //checks if there is a row returned by the user and admin query
+        if ($adminquery->num_rows() > 0 || $userquery->num_rows() > 0) {
             return true;
         } else {
             return false;
         }
     }
+
+    //this function will check if the email used is an admin.
     function isAdmin($email)
     {
         //checks if its in the admins table
@@ -38,7 +40,7 @@ class Login_model extends CI_Model
         }
     }
 
-    //checks if an admin or a user has the right password
+    //checks if an admin or a user has the right password 
     function login($data)
     {
         $condition = "email =" . "'" . $data['email'] . "' AND " . "password =" . "'" . $data['password'] . "'";
@@ -47,17 +49,17 @@ class Login_model extends CI_Model
         $this->db->from('admins');
         $this->db->where($condition);
         $this->db->limit(1);
-        $query = $this->db->get();
+        $adminquery = $this->db->get();
 
         //query for users
         $this->db->select('*');
         $this->db->from('users');
         $this->db->where($condition);
         $this->db->limit(1);
-        $query2 = $this->db->get();
+        $userquery = $this->db->get();
 
         //checks if the querry of the user or the admin will give a single result
-        if ($query->num_rows() == 1 || $query2->num_rows() == 1) {
+        if ($adminquery->num_rows() == 1 || $userquery->num_rows() == 1) {
             return true;
         } else {
             return false;
