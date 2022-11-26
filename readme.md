@@ -138,16 +138,32 @@ Mr. Garick Ollivander, the owner of the Ollivander's Wands located in Diagon All
          <td>Database Setup (admin/user)</td>
       </tr>
       <tr>
+         <td>✅</td>
+         <td>Admin panel View (user)</td>
+      </tr>
+      <tr>
+         <td>✅</td>
+         <td>Admin panel Edit (user)</td>
+      </tr>
+      <tr>
+         <td>✅</td>
+         <td>Admin panel Delete (user)</td>
+      </tr>
+      <tr>
+         <td>✅</td>
+         <td>Admin profile</td>
+      </tr>
+            <tr>
          <td>❌</td>
-         <td>Admin panel View (user/items)</td>
+         <td>Admin panel View (items)</td>
       </tr>
       <tr>
          <td>❌</td>
-         <td>Admin panel Edit (user/items)</td>
+         <td>Admin panel Edit (items)</td>
       </tr>
       <tr>
          <td>❌</td>
-         <td>Admin panel Delete (user/items)</td>
+         <td>Admin panel Delete (items)</td>
       </tr>
       <tr>
          <td>❌</td>
