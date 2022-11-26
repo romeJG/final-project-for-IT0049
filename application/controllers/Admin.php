@@ -14,9 +14,24 @@ class Admin extends CI_Controller
     public function index()
     {
         $data['title'] = "Admin | Lukso";
-        $data['active'] = "admin";
-        $this->load->view('include/header_view', $data);
-        $this->load->view('include/navbar_view', $data);
-        // $this->load->view('admin_view');
+        $data['active'] = "home";
+        $this->load->view('admin/admin_header_view', $data);
+        $this->load->view('admin/include/admin_nav_view', $data);
+
+        $adminEmail = $this->session->userdata('email');
+        //redirect you home if you have no email in the session.
+        if (!$adminEmail) {
+            redirect('login');
+        }
+        //gets the admin name and put it into a session.
+        $adminName = $this->admin_model->getAdminName($adminEmail);
+        $this->session->set_userdata(array('name' => $adminName));
+        //loads the body of the admin home
+        $this->load->view('admin/admin_home_view', $data);
+    }
+    public function killsess()
+    {
+        $this->session->sess_destroy();
+        redirect();
     }
 }
