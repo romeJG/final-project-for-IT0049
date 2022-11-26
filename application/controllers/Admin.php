@@ -27,11 +27,34 @@ class Admin extends CI_Controller
         $adminName = $this->admin_model->getAdminName($adminEmail);
         $this->session->set_userdata(array('name' => $adminName));
         //loads the body of the admin home
+        $data['users'] = $this->admin_model->getUsers();
         $this->load->view('admin/admin_home_view', $data);
     }
+    //will kill the session of the admin
     public function killsess()
     {
         $this->session->sess_destroy();
         redirect();
+    }
+    //view the user's info via id in the URL
+    public function viewUser($id)
+    {
+        $data['title'] = "View User | Lukso";
+        $data['active'] = "user";
+        $data['user'] = $this->admin_model->getUser($id);
+        $this->load->view('admin/admin_header_view', $data);
+        $this->load->view('admin/include/admin_nav_view', $data);
+        $this->load->view('admin/view_user_view', $data);
+    }
+    //shows the profile of the current admin in session
+    public function profile()
+    {
+        $data['title'] = "View User | Lukso";
+        $data['active'] = "user";
+        $data['user'] = $this->admin_model->getAdmin($this->session->userdata('email'));
+
+        $this->load->view('admin/admin_header_view', $data);
+        $this->load->view('admin/include/admin_nav_view', $data);
+        $this->load->view('admin/profile_view', $data);
     }
 }

@@ -1,6 +1,9 @@
-.body-container {
+.html {
 
     margin: 0% 10% 0% 10%;
+
 }
 
-.navbar {}
+.body {
+    padding: 3% 10% 0% 10%;
+}

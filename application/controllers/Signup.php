@@ -173,7 +173,7 @@ class Signup extends CI_Controller
             if ($this->login_model->isAdmin($this->session->userdata('email'))) {
                 redirect('admin');
             } else {
-                echo "is admin?" . $this->session->userdata('isAdmin');
+                redirect('');
             }
         }
     }

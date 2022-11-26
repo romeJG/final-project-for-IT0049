@@ -25,4 +25,24 @@ class Admin_model extends CI_Model
         }
         return $name;
     }
+    function getUsers()
+    {
+        return $this->db->get('users')->result();
+    }
+
+    public function getUser($id)
+    {
+        $where = array('id' => $id);
+        $query = $this->db->get_where('users', $where);
+        $result = $query->row();
+        return $result;
+    }
+
+    public function getAdmin($email)
+    {
+        $where = array('email' => $email);
+        $query = $this->db->get_where('admins', $where);
+        $result = $query->row();
+        return $result;
+    }
 }
