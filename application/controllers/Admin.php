@@ -14,7 +14,7 @@ class Admin extends CI_Controller
     public function index()
     {
         $data['title'] = "Admin | Lukso";
-        $data['active'] = "home";
+        $data['active'] = "users";
         $this->load->view('admin/admin_header_view', $data);
         $this->load->view('admin/include/admin_nav_view', $data);
 

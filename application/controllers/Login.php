@@ -13,6 +13,8 @@ class Login extends CI_Controller
     }
     public function index()
     {
+        //check if session exist
+        $this->redirectIfSessExist();
         $data['title'] = "Sign in | Lukso";
         $data['active'] = "login";
         $this->load->view('include/header_view', $data);
@@ -67,5 +69,17 @@ class Login extends CI_Controller
     public function emailExist($email)
     {
         return $this->login_model->emailExist($email);
+    }
+    public function redirectIfSessExist()
+    {
+        //if no session it will not try to login.
+        if ($this->session->userdata('email')) {
+            //logs in the user if there is a session
+            if ($this->login_model->isAdmin($this->session->userdata('email'))) {
+                redirect('admin');
+            } else {
+                echo "is admin?" . $this->session->userdata('isAdmin');
+            }
+        }
     }
 }

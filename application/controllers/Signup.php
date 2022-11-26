@@ -10,10 +10,13 @@ class Signup extends CI_Controller
         $this->load->helper(array('form', 'url'));
         $this->load->library(array('form_validation', 'session'));
         $this->load->model('signup_model');
+        $this->load->model('login_model');
     }
 
     public function index()
     {
+        //check if session exist
+        $this->redirectIfSessExist();
         $data['title'] = "Sign Up | Lukso";
         $data['active'] = "signup";
         $this->load->view('include/header_view', $data);
@@ -161,5 +164,17 @@ class Signup extends CI_Controller
         }
 
         redirect('');
+    }
+    public function redirectIfSessExist()
+    {
+        //if no session it will not try to login.
+        if ($this->session->userdata('email')) {
+            //logs in the user if there is a session
+            if ($this->login_model->isAdmin($this->session->userdata('email'))) {
+                redirect('admin');
+            } else {
+                echo "is admin?" . $this->session->userdata('isAdmin');
+            }
+        }
     }
 }
