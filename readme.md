@@ -12,20 +12,20 @@ Final Project for IT0049
    </thead>
    <tbody>
       <tr>
-         <td>Espero, Jessielyn Doris</td>
-         <td>Leader</td>
+         <td>Guillermo, Justine Rome</td>
+         <td>Leader / Developer (Front/Back)</td>
       </tr>
       <tr>
-         <td>Guillermo, Justine Rome</td>
-         <td>Developer</td>
+         <td>Espero, Jessielyn Doris</td>
+         <td>Member / Quality Assurance</td>
       </tr>
       <tr>
          <td>Que, Joseph Ross</td>
-         <td>Designer</td>
+         <td>Member / Designer</td>
       </tr>
       <tr>
          <td>Valmadrid, Genome Jacob</td>
-         <td>Designer</td>
+         <td>Member / Designer</td>
       </tr>
    </tbody>
 </table>
