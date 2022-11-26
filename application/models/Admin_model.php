@@ -45,4 +45,19 @@ class Admin_model extends CI_Model
         $result = $query->row();
         return $result;
     }
+    // Update a single user
+    public function editUser($id, $data)
+    {
+        $where = array('id' => $id);
+        $this->db->where($where);
+        $this->db->update('users', $data);
+    }
+
+    // Delete a single user
+    public function delete($id)
+    {
+        $where = array('id' => $id);
+        $this->db->where($where);
+        $this->db->delete('users');
+    }
 }

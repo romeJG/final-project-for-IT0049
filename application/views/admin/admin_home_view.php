@@ -33,7 +33,7 @@
                         <td>
                             <a type="button" class="btn btn-primary" href="<?php echo base_url('admin/viewUser/') . $user->id; ?>">View User</a>
                             <a type="button" class="btn btn-secondary" href="<?php echo base_url('admin/editUser/') . $user->id; ?>">Edit User</a>
-                            <a type="button" class="btn btn-danger" href="<?php echo base_url('admin/deleteUser') . $user->id; ?>">Delete User</a>
+                            <a type="button" class="btn btn-danger" href="<?php echo base_url('admin/confirmDeleteUser/') . $user->id; ?>">Delete User</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
