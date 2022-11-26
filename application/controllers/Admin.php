@@ -101,9 +101,6 @@ class Admin extends CI_Controller
             $user['gender'] = $gender;
             $user['birthday'] = $birthday;
             $this->admin_model->editUser($id, $user);
-            $data['title'] = "Sucess! | Admin";
-            $data['active'] = "user";
-            $this->load->view('admin/admin_header_view', $data);
 
             $data['title'] = "Success | Admin";
             $data['active'] = "user";
