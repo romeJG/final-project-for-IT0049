@@ -32,12 +32,51 @@ class Admin extends CI_Controller
         $this->load->view('admin/admin_home_view', $data);
     }
 
+
+    //     .o.             .o8                     o8o                   oooooooooooo                                       .    o8o                                 
+    //     .888.           "888                     `"'                   `888'     `8                                     .o8    `"'                                 
+    //    .8"888.      .oooo888  ooo. .oo.  .oo.   oooo  ooo. .oo.         888         oooo  oooo  ooo. .oo.    .ooooo.  .o888oo oooo   .ooooo.  ooo. .oo.    .oooo.o 
+    //   .8' `888.    d88' `888  `888P"Y88bP"Y88b  `888  `888P"Y88b        888oooo8    `888  `888  `888P"Y88b  d88' `"Y8   888   `888  d88' `88b `888P"Y88b  d88(  "8 
+    //  .88ooo8888.   888   888   888   888   888   888   888   888        888    "     888   888   888   888  888         888    888  888   888  888   888  `"Y88b.  
+    // .8'     `888.  888   888   888   888   888   888   888   888        888          888   888   888   888  888   .o8   888 .  888  888   888  888   888  o.  )88b 
+    // o88o     o8888o `Y8bod88P" o888o o888o o888o o888o o888o o888o      o888o         `V88V"V8P' o888o o888o `Y8bod8P'   "888" o888o `Y8bod8P' o888o o888o 8""888P' 
+
+
+
+
     //will kill the session of the admin
     public function killsess()
     {
         $this->session->sess_destroy();
         redirect();
     }
+
+
+
+    //shows the profile of the current admin in session
+    public function profile()
+    {
+        $data['title'] = "Profile | Admin";
+        $data['active'] = "user";
+        $data['user'] = $this->admin_model->getAdmin($this->session->userdata('email'));
+
+        $this->load->view('admin/admin_header_view', $data);
+        $this->load->view('admin/include/admin_nav_view', $data);
+        $this->load->view('admin/profile_view', $data);
+    }
+
+    // ooooo     ooo                                  oooooooooooo                                       .    o8o                                 
+    // `888'     `8'                                  `888'     `8                                     .o8    `"'                                 
+    //  888       8   .oooo.o  .ooooo.  oooo d8b       888         oooo  oooo  ooo. .oo.    .ooooo.  .o888oo oooo   .ooooo.  ooo. .oo.    .oooo.o 
+    //  888       8  d88(  "8 d88' `88b `888""8P       888oooo8    `888  `888  `888P"Y88b  d88' `"Y8   888   `888  d88' `88b `888P"Y88b  d88(  "8 
+    //  888       8  `"Y88b.  888ooo888  888           888    "     888   888   888   888  888         888    888  888   888  888   888  `"Y88b.  
+    //  `88.    .8'  o.  )88b 888    .o  888           888          888   888   888   888  888   .o8   888 .  888  888   888  888   888  o.  )88b 
+    //    `YbodP'    8""888P' `Y8bod8P' d888b         o888o         `V88V"V8P' o888o o888o `Y8bod8P'   "888" o888o `Y8bod8P' o888o o888o 8""888P' 
+
+
+
+
+
     //view the user's info via id in the URL
     public function viewUser($id)
     {
@@ -108,18 +147,6 @@ class Admin extends CI_Controller
         }
     }
 
-
-    //shows the profile of the current admin in session
-    public function profile()
-    {
-        $data['title'] = "Profile | Admin";
-        $data['active'] = "user";
-        $data['user'] = $this->admin_model->getAdmin($this->session->userdata('email'));
-
-        $this->load->view('admin/admin_header_view', $data);
-        $this->load->view('admin/include/admin_nav_view', $data);
-        $this->load->view('admin/profile_view', $data);
-    }
     // Function for deleting a user
     public function confirmDeleteUser($id)
     {
@@ -136,6 +163,18 @@ class Admin extends CI_Controller
         $this->admin_model->delete($id);
         $this->index();
     }
+
+
+
+
+    // ooooo     .                                             oooooooooooo                                       .    o8o                                 
+    // `888'   .o8                                             `888'     `8                                     .o8    `"'                                 
+    //  888  .o888oo  .ooooo.  ooo. .oo.  .oo.    .oooo.o       888         oooo  oooo  ooo. .oo.    .ooooo.  .o888oo oooo   .ooooo.  ooo. .oo.    .oooo.o 
+    //  888    888   d88' `88b `888P"Y88bP"Y88b  d88(  "8       888oooo8    `888  `888  `888P"Y88b  d88' `"Y8   888   `888  d88' `88b `888P"Y88b  d88(  "8 
+    //  888    888   888ooo888  888   888   888  `"Y88b.        888    "     888   888   888   888  888         888    888  888   888  888   888  `"Y88b.  
+    //  888    888 . 888    .o  888   888   888  o.  )88b       888          888   888   888   888  888   .o8   888 .  888  888   888  888   888  o.  )88b 
+    // o888o   "888" `Y8bod8P' o888o o888o o888o 8""888P'      o888o         `V88V"V8P' o888o o888o `Y8bod8P'   "888" o888o `Y8bod8P' o888o o888o 8""888P' 
+
 
     public function items($show)
     {
@@ -217,7 +256,7 @@ class Admin extends CI_Controller
         $this->load->view('admin/include/admin_nav_view', $data);
         $this->load->view('admin/admin_view_item_view', $data);
     }
-
+    //shows the views for editing an item
     public function editItem($id)
     {
         $data['title'] = "Edit Item | Admin";
@@ -227,6 +266,8 @@ class Admin extends CI_Controller
         $this->load->view('admin/include/admin_nav_view', $data);
         $this->load->view('admin/admin_edit_item_view', $data);
     }
+
+    //process the editing of item (validations)
     public function processEditItem($id)
     {
         $data['item'] = $this->admin_model->getItem($id);
@@ -274,5 +315,27 @@ class Admin extends CI_Controller
             $this->load->view('admin/include/admin_nav_view', $data);
             $this->load->view('admin/success_item_view', $data);
         }
+    }
+
+    // Function for deleting a user
+    public function confirmDeleteItem($id)
+    {
+        $data['title'] = "Items | Admin";
+        $data['active'] = "user";
+        $data['item'] = $this->admin_model->getItem($id);
+
+        $this->load->view('admin/admin_header_view', $data);
+        $this->load->view('admin/include/admin_nav_view', $data);
+        $this->load->view('admin/confirm_delete_item_view', $data);
+    }
+    public function processDeleteItem($id)
+    {   //gets the item's data (used for deleting the image)
+        $data['item'] = $this->admin_model->getItem($id);
+        //deletes the item's image from the directory/server
+        unlink('./uploads/images/' . $data['item']->image);
+
+        //delete the data
+        $this->admin_model->deleteItem($id);
+        $this->items("all");
     }
 }
