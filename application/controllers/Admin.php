@@ -7,7 +7,7 @@ class Admin extends CI_Controller
     {
         //never load libraries or models in here.
         parent::__construct();
-        $this->load->helper(array('form', 'url'));
+        $this->load->helper(array('form', 'url', 'file'));
         $this->load->library(array('form_validation', 'session', 'upload', 'image_lib'));
         $this->load->model('admin_model');
     }
@@ -216,5 +216,63 @@ class Admin extends CI_Controller
         $this->load->view('admin/admin_header_view', $data);
         $this->load->view('admin/include/admin_nav_view', $data);
         $this->load->view('admin/admin_view_item_view', $data);
+    }
+
+    public function editItem($id)
+    {
+        $data['title'] = "Edit Item | Admin";
+        $data['active'] = "item";
+        $data['item'] = $this->admin_model->getItem($id);
+        $this->load->view('admin/admin_header_view', $data);
+        $this->load->view('admin/include/admin_nav_view', $data);
+        $this->load->view('admin/admin_edit_item_view', $data);
+    }
+    public function processEditItem($id)
+    {
+        $data['item'] = $this->admin_model->getItem($id);
+        // Set configuration for the upload library
+        $image_config['upload_path'] = './uploads/images/';
+        $image_config['allowed_types'] = 'gif|jpg|png|jpeg|bmp';
+        //$config['max_size'] = '10000';
+        //$config['max_width'] = '10240';
+        //$config['max_height'] = '7680';
+        //$config['encrypt_name'] = TRUE;
+        $this->upload->initialize($image_config);
+
+        //Set form validation rules
+        $this->form_validation->set_rules('name', 'Item Name', 'required');
+        $this->form_validation->set_rules('price', 'Item Price', 'required|numeric');
+        $this->form_validation->set_rules('short_description', 'Item Short Description', 'required');
+        $this->form_validation->set_rules('description', 'Item Description', 'required');
+        //Run the form validation
+        if ($this->form_validation->run() == FALSE) {
+            $this->addItem();
+        } else {
+            //Upload image
+
+            if ($this->upload->do_upload('image')) {
+                $image_data = $this->upload->data();
+                unlink('./uploads/images/' . $data['item']->image);
+            } else {
+                $image_data['file_name'] = $data['item']->image;
+            }
+            // Get the form data
+            $data = array(
+                'name' => $this->input->post('name'),
+                'price' => $this->input->post('price'),
+                'short_description' => $this->input->post('short_description'),
+                'description' => $this->input->post('description'),
+                'image' => $image_data['file_name'],
+                'is_active' => $this->input->post('is_active')
+            );
+            $this->admin_model->editItem($id, $data);
+            //setup the views
+            $data['title'] = "Success | Admin";
+            $data['active'] = "user";
+            $data['item'] = $this->admin_model->getItem($id);
+            $this->load->view('admin/admin_header_view', $data);
+            $this->load->view('admin/include/admin_nav_view', $data);
+            $this->load->view('admin/success_item_view', $data);
+        }
     }
 }

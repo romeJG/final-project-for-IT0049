@@ -88,4 +88,11 @@ class Admin_model extends CI_Model
         $result = $query->row();
         return $result;
     }
+    // Update a single item
+    public function editItem($id, $data)
+    {
+        $where = array('id' => $id);
+        $this->db->where($where);
+        $this->db->update('items', $data);
+    }
 }

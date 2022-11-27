@@ -23,3 +23,11 @@
 .item-img-details {
     height: 370px;
 }
+
+select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid var(rgb(215, 215, 215));
+    border-radius: 4px;
+    background-color: white;
+}
