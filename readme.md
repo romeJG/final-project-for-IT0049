@@ -170,7 +170,7 @@ Mr. Garick Ollivander, the owner of the Ollivander's Wands located in Diagon All
          <td>Admin panel Edit items with unlink </td>
       </tr>
       <tr>
-         <td>❌</td>
+         <td>✅</td>
          <td>Admin panel Delete items with unlink</td>
       </tr>
       <tr>
