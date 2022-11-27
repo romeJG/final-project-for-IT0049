@@ -53,4 +53,4 @@
                 <input readonly type="text" class="form-control" id="address" name="address" aria-describedby="emailHelp" placeholder="Address" value="<?php echo $user->id; ?>">
             </div>
         </div>
-        <a type="a" class="btn btn-success" href="<?= base_url('admin'); ?>">Back to list</a>
+        <a type="a" class="btn btn-primary" href="<?= base_url('admin'); ?>">Back to list</a>

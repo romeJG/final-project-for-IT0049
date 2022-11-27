@@ -80,4 +80,12 @@ class Admin_model extends CI_Model
     {
         $this->db->insert('items', $data);
     }
+
+    public function getItem($id)
+    {
+        $where = array('id' => $id);
+        $query = $this->db->get_where('items', $where);
+        $result = $query->row();
+        return $result;
+    }
 }

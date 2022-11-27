@@ -208,4 +208,13 @@ class Admin extends CI_Controller
             $this->items("all");
         }
     }
+    public function viewItem($id)
+    {
+        $data['title'] = "View Item | Admin";
+        $data['active'] = "item";
+        $data['item'] = $this->admin_model->getItem($id);
+        $this->load->view('admin/admin_header_view', $data);
+        $this->load->view('admin/include/admin_nav_view', $data);
+        $this->load->view('admin/admin_view_item_view', $data);
+    }
 }
