@@ -55,7 +55,7 @@
                 </div>
             </div>
             <a type="a" class="btn btn-success" href="<?= base_url('admin'); ?>">Back to list</a>
-            <a type="a" class="btn btn-danger" href="<?= base_url('admin/processDelete/' . $user->id); ?>">Yes Delete it!</a>
+            <a type="a" class="btn btn-danger" href="<?= base_url('admin/processDeleteUser/' . $user->id); ?>">Yes Delete it!</a>
 
         </form>
     </div>

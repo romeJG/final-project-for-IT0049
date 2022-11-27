@@ -60,4 +60,24 @@ class Admin_model extends CI_Model
         $this->db->where($where);
         $this->db->delete('users');
     }
+    //gets the full table
+    public function getItems($show)
+    {
+        if ($show == "all") {
+            return $this->db->get('items')->result();
+        } else if ($show == "active") {
+            $where = array('is_active' => 1);
+            return $this->db->get_where('items', $where)->result();
+        } else if ($show == "inactive") {
+            $where = array('is_active' => 0);
+            return $this->db->get_where('items', $where)->result();
+        } else {
+            return $this->db->get('items')->result();
+        }
+    }
+
+    public function saveItem($data)
+    {
+        $this->db->insert('items', $data);
+    }
 }

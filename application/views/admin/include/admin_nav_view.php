@@ -13,7 +13,7 @@
                         <a class="nav-link <?php if ($active == "users") echo "active" ?>" aria-current="page" href="<?= base_url('admin'); ?>">Users</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php if ($active == "items") echo "active" ?>" href="<?= base_url('admin/items'); ?>">Items</a>
+                        <a class="nav-link <?php if ($active == "items") echo "active" ?>" href="<?= base_url('admin/items/all'); ?>">Items</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>

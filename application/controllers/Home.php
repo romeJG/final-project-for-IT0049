@@ -14,12 +14,12 @@ class Home extends CI_Controller
 
     public function index()
     {
+        $this->redirectIfSessExist();
         $data['title'] = "Lukso Wands";
         $data['active'] = "home";
         $this->load->view('include/header_view', $data);
         $this->load->view('include/navbar_view', $data);
         $this->load->view('home_view');
-        $this->redirectIfSessExist();
     }
     public function redirectIfSessExist()
     {

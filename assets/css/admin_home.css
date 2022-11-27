@@ -7,3 +7,15 @@
 .body {
     padding: 3% 10% 0% 10%;
 }
+
+.item-img {
+    width: 100px;
+}
+
+.long-desc {
+    height: 90px;
+}
+
+.item-img-add {
+    height: 300px;
+}
