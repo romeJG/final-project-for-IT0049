@@ -135,19 +135,19 @@ Mr. Garick Ollivander, the owner of the Ollivander's Wands located in Diagon All
       </tr>
       <tr>
          <td>✅</td>
-         <td>Database Setup (admin/user)</td>
+         <td>Database Setup admin/user/items</td>
       </tr>
       <tr>
          <td>✅</td>
-         <td>Admin panel View (user)</td>
+         <td>Admin panel View user</td>
       </tr>
       <tr>
          <td>✅</td>
-         <td>Admin panel Edit (user)</td>
+         <td>Admin panel Edit user</td>
       </tr>
       <tr>
          <td>✅</td>
-         <td>Admin panel Delete (user)</td>
+         <td>Admin panel Delete user</td>
       </tr>
       <tr>
          <td>✅</td>
@@ -155,23 +155,23 @@ Mr. Garick Ollivander, the owner of the Ollivander's Wands located in Diagon All
       </tr>
       <tr>
          <td>✅</td>
-         <td>Admin panel View (items)</td>
+         <td>Admin panel View items</td>
       </tr>
       <tr>
          <td>✅</td>
-         <td>Admin panel Individual View (items)</td>
+         <td>Admin panel Individual View items</td>
       </tr>
       <tr>
          <td>✅</td>
          <td>Admin panel Add Item</td>
       </tr>
       <tr>
-         <td>❌</td>
-         <td>Admin panel Edit (items)</td>
+         <td>✅</td>
+         <td>Admin panel Edit items with unlink </td>
       </tr>
       <tr>
          <td>❌</td>
-         <td>Admin panel Delete (items)</td>
+         <td>Admin panel Delete items with unlink</td>
       </tr>
       <tr>
          <td>❌</td>
