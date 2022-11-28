@@ -174,7 +174,7 @@ Mr. Garick Ollivander, the owner of the Ollivander's Wands located in Diagon All
          <td>Admin panel Delete items with unlink</td>
       </tr>
       <tr>
-         <td>❌</td>
+         <td>✅</td>
          <td>User Profile</td>
       </tr>
       <tr>
@@ -187,6 +187,10 @@ Mr. Garick Ollivander, the owner of the Ollivander's Wands located in Diagon All
       </tr>
       <tr>
          <td>❌</td>
+         <td>Store Page (add pagination if possible)</td>
+      </tr>
+      <tr>
+         <td>❌</td>
          <td>User Add to cart</td>
       </tr>
       <tr>
@@ -196,10 +200,6 @@ Mr. Garick Ollivander, the owner of the Ollivander's Wands located in Diagon All
       <tr>
          <td>❌</td>
          <td>User Checkout cart</td>
-      </tr>
-      <tr>
-         <td>❌</td>
-         <td>Store Page (add pagination if possible)</td>
       </tr>
       <tr>
          <td>🎉</td>
