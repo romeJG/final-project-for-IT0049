@@ -11,7 +11,7 @@
         <?php if ($items) : ?>
             <?php foreach ($items as $item) : ?>
                 <div class="card text-black mb-3 col-md-3 item mx-2" style="width: 18rem;">
-                    <a href="#">
+                    <a href="<?php echo base_url('Store/lookItem/') . $item->id; ?>">
                         <img class="card-img-top" src="<?php echo base_url('uploads/images/') . $item->image; ?>" alt="Card image cap">
                     </a>
                     <div class="card-body">

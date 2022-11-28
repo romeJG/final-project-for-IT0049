@@ -31,3 +31,10 @@
     transform: scale(1.2);
 
 }
+
+.item-frame {
+    background-color: antiquewhite;
+    padding: 3%;
+    margin: 5% 3% 3% 4%;
+    border-radius: 10px;
+}

@@ -59,4 +59,13 @@ class Store extends CI_Controller
             }
         }
     }
+    public function lookItem($id)
+    {
+        $data['title'] = "Item | Lukso";
+        $data['active'] = "store";
+        $this->load->view('include/header_view', $data);
+        $this->load->view('include/navbar_view', $data);
+        $data['item'] = $this->store_model->getItem($id);
+        $this->load->view('user/item_preview', $data);
+    }
 }
