@@ -32,11 +32,11 @@ Final Project for IT0049
 <br>
 <br>
 <h2>❓ How to Use ❓</h2>
-<h6>Requirements<h6>
+<h4>Requirements ✔</h4>
 - XAMPP<br>
 - Browser<br>
   <br>
-<h6>How to Install</h6>
+<h4>How to Install 💿</h4>
 - extract the zipfile in httdocs (if xampp)<br>
 - ps the path on the dir should be xampp/lukso/(all files)<br>
 - type localhost/lukso in browser<br>
