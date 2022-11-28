@@ -9,20 +9,24 @@ class Admin extends CI_Controller
         parent::__construct();
         $this->load->helper(array('form', 'url', 'file'));
         $this->load->library(array('form_validation', 'session', 'upload', 'image_lib'));
-        $this->load->model('admin_model');
+        $this->load->model(array('admin_model', 'login_model'));
+
+        //checks if user is admin if not they will end up in a 404page works on all the controllers
+        $adminEmail = $this->session->userdata('email');
+        //redirect you home if you have no email in the session.
+        if (!$adminEmail || !$this->login_model->isAdmin($adminEmail)) {
+            redirect('404');
+        }
     }
     public function index()
     {
+
         $data['title'] = "Home | Admin";
         $data['active'] = "users";
         $this->load->view('admin/admin_header_view', $data);
         $this->load->view('admin/include/admin_nav_view', $data);
 
-        $adminEmail = $this->session->userdata('email');
-        //redirect you home if you have no email in the session.
-        if (!$adminEmail) {
-            redirect('login');
-        }
+
         //gets the admin name and put it into a session.
         $adminName = $this->admin_model->getAdminName($adminEmail);
         $this->session->set_userdata(array('name' => $adminName));

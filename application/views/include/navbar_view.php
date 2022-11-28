@@ -15,14 +15,14 @@
                     <a class="nav-link <?php if ($active == "home") echo "active" ?>" aria-current="page" href="<?= base_url(''); ?>">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php if ($active == "store") echo "active" ?>" href="#">Store</a>
+                    <a class="nav-link <?php if ($active == "store") echo "active" ?>" href="<?= base_url('store'); ?>">Store</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle <?php if ($active == "about_us") echo "active" ?>" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         About us
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">What we do</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://github.com/romeJG/lukso">What is this?</a></li>
                         <li><a class="dropdown-item" href="#">ewan ko po</a></li>
                         <li>
                             <hr class="dropdown-divider">
@@ -35,8 +35,14 @@
                 </li> -->
             </ul>
             <div class="d-flex">
-                <a class="btn-nav btn btn-outline-dark" href="<?= base_url('login'); ?>" type="submit" style>Login</a>
-                <a class="btn-nav btn btn-dark" href="<?= base_url('signup'); ?>" type="submit">Signup</a>
+                <?php if (!($this->session->userdata('email'))) : ?>
+                    <a class="btn-nav btn btn-outline-dark" href="<?= base_url('login'); ?>" type="" style>Login</a>
+                    <a class="btn-nav btn btn-dark" href="<?= base_url('signup'); ?>" type="">Signup</a>
+                <?php else : ?>
+                    <a class="btn-nav btn btn-outline-dark" href="<?= base_url('user/killsess'); ?>" type="" style>Logout</a>
+                    <a class="btn-nav btn btn-outline-dark" href="<?= base_url('user'); ?>" type="">Profile</a>
+                    <a class="btn-nav btn btn-dark" href="<?= base_url('cart'); ?>" type=""><i class="fa-solid fa-cart-shopping"></i></a>
+                <?php endif; ?>
             </div>
         </div>
     </div>

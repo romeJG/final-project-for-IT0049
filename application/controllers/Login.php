@@ -45,13 +45,12 @@ class Login extends CI_Controller
                 //sets the value to true if admin
                 $this->session->set_userdata(array('isAdmin' => true));
                 $this->session->set_userdata(array('email' => $data['email']));
-                echo "is admin?" . $this->session->userdata('isAdmin');
                 redirect('admin');
             } else {
                 //sets the value to false cuz its a user
                 $this->session->set_userdata(array('isAdmin' => false));
                 $this->session->set_userdata(array('email' => $data['email']));
-                echo "is admin?" . $this->session->userdata('isAdmin');
+                redirect('');
             }
         }
     }

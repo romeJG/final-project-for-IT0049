@@ -28,8 +28,6 @@ class Home extends CI_Controller
             //logs in the user if there is a session
             if ($this->login_model->isAdmin($this->session->userdata('email'))) {
                 redirect('admin');
-            } else {
-                redirect('');
             }
         }
     }
