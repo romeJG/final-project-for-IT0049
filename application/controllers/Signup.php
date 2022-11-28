@@ -92,10 +92,10 @@ class Signup extends CI_Controller
                 'smtp_host' => 'ssl://smtp.gmail.com',
                 'smptp_timeout' => 5,
                 'smtp_port' => 465,
-                'smtp_user' => 'luksowands@gmail.com',
+                'smtp_user' => 'wandslukso@gmail.com',
                 //app password from google "app passwords"
-                //account real password: "luksowands12345678"
-                'smtp_pass' => 'tzweisaqfiohkjpw',
+                //account real password: ""
+                'smtp_pass' => 'hfdxumiiiqnywomg',
                 'charset' => 'utf-8',
                 'mailtype' => 'html',
                 'newline' => '\r\n'
@@ -127,7 +127,7 @@ class Signup extends CI_Controller
             //sends the email and redirect if email is sent.
 
             if ($this->email->send()) {
-                redirect('');
+                $this->checkEmail();
             } else {
                 // redirect('ayawgumana');
                 echo $this->email->print_debugger();
@@ -135,6 +135,16 @@ class Signup extends CI_Controller
             //<-------------------- END of MAILER --------------------->
 
         }
+    }
+
+    public function checkEmail()
+    {
+        //check if session exist
+        $this->redirectIfSessExist();
+        $data['title'] = "Sign Up | Lukso";
+        $data['active'] = "signup";
+        $this->load->view('include/header_view', $data);
+        $this->load->view('check_email_view');
     }
 
     public function activate()
