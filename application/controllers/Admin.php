@@ -26,7 +26,7 @@ class Admin extends CI_Controller
         $this->load->view('admin/admin_header_view', $data);
         $this->load->view('admin/include/admin_nav_view', $data);
 
-
+        $adminEmail = $this->session->userdata('email');
         //gets the admin name and put it into a session.
         $adminName = $this->admin_model->getAdminName($adminEmail);
         $this->session->set_userdata(array('name' => $adminName));
