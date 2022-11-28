@@ -9,7 +9,7 @@ class User extends CI_Controller
         parent::__construct();
         $this->load->helper(array('form', 'url', 'file'));
         $this->load->library(array('form_validation', 'session', 'upload', 'image_lib'));
-        $this->load->model('user_model');
+        $this->load->model(array('user_model', 'login_model'));
     }
     public function index()
     {
@@ -79,5 +79,44 @@ class User extends CI_Controller
             $this->load->view('include/navbar_view', $data);
             $this->load->view('user/edit_profile_success_view', $data);
         }
+    }
+
+    //change pass of the user
+    public function changePass()
+    {
+        $data['title'] = "Password Change | User";
+        $data['active'] = "users";
+        $data['user'] = $this->user_model->getUserWithEmail($this->session->userdata('email'));
+        $this->load->view('include/header_view', $data);
+        $this->load->view('include/navbar_view', $data);
+        $this->load->view('user/change_password_view', $data);
+    }
+    public function processChangePass()
+    {
+        $this->load->database();
+        $this->form_validation->set_rules('currentpassword', 'Password', 'required|callback_samePass');
+        $this->form_validation->set_rules('password', 'Password', 'required|min_length[8]|max_length[30]');
+        $this->form_validation->set_rules('repassword', 'Confirm Password', 'required|matches[password]');
+        if ($this->form_validation->run() == FALSE) {
+            //refresh the page if the fields are not valid
+            $this->changePass();
+        } else {
+            $data['password'] = $this->input->post('password');
+            $this->user_model->editUser($this->session->userdata('email'), $data);
+            $data['title'] = "Edit | User";
+            $data['active'] = "users";
+            $this->load->view('include/header_view', $data);
+            $this->load->view('include/navbar_view', $data);
+            $this->load->view('user/edit_profile_success_view', $data);
+        }
+    }
+    //will check if the password of the user is the same in the database
+    public function samePass($password)
+    {
+        $data = array(
+            'email' => $this->session->userdata('email'),
+            'password' => $password
+        );
+        return $this->login_model->login($data);
     }
 }

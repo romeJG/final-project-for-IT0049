@@ -36,7 +36,11 @@ Final Project for IT0049
 - XAMPP<br>
 - Browser<br>
   <br>
-URL: localhost/lukso
+<h6>How to Install</h6>
+- extract the zipfile in httdocs (if xampp)<br>
+- ps the path on the dir should be xampp/lukso/(all files)<br>
+- type localhost/lukso in browser<br>
+
 <br>
 <br>
 <h2>🕵🏾‍♂️ PROJECT SPECIFICATIONS AND DETAILS 🕵🏾‍♂️</h2>
@@ -190,7 +194,7 @@ Mr. Garick Ollivander, the owner of the Ollivander's Wands located in Diagon All
          <td>User Edit Profile</td>
       </tr>
       <tr>
-         <td>❌</td>
+         <td>✅</td>
          <td>User Change password</td>
       </tr>
       <tr>
