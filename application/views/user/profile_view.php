@@ -61,10 +61,10 @@
                 <a href="<?= base_url(''); ?>" type="cancel" class="form-button btn btn-danger">Back</a>
             </div>
             <div class="col-md">
-            </div>
-            <div class="col-md">
                 <a href="<?= base_url('user/editProfile'); ?>" type="cancel" class="form-button btn btn-primary">Edit Profile</a>
+                <a href="<?= base_url('user/changePass'); ?>" type="cancel" class="form-button btn btn-primary">Change Password</a>
             </div>
+
 
         </div>
         </form>
