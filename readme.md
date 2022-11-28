@@ -31,6 +31,14 @@ Final Project for IT0049
 </table>
 <br>
 <br>
+<h2>❓ How to Use ❓</h2>
+<h6>Requirements<h6>
+- XAMPP<br>
+- Browser<br>
+  <br>
+URL: localhost/lukso
+<br>
+<br>
 <h2>🕵🏾‍♂️ PROJECT SPECIFICATIONS AND DETAILS 🕵🏾‍♂️</h2>
 	
 Mr. Garick Ollivander, the owner of the Ollivander's Wands located in Diagon Alley, London, has requested you to create a web application for his wand shop. This web application needs to have the following:
