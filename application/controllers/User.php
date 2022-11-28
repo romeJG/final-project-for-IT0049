@@ -15,7 +15,7 @@ class User extends CI_Controller
     {
         $data['title'] = "Profile | User";
         $data['active'] = "users";
-        $data['user'] = $this->user_model->getUser($this->session->userdata('email'));
+        $data['user'] = $this->user_model->getUserWithEmail($this->session->userdata('email'));
         $this->load->view('include/header_view', $data);
         $this->load->view('include/navbar_view', $data);
         $this->load->view('user/profile_view', $data);
@@ -37,5 +37,47 @@ class User extends CI_Controller
     {
         $this->session->sess_destroy();
         redirect();
+    }
+
+    public function editProfile()
+    {
+        $data['title'] = "Edit | User";
+        $data['active'] = "users";
+        $data['user'] = $this->user_model->getUserWithEmail($this->session->userdata('email'));
+        $this->load->view('include/header_view', $data);
+        $this->load->view('include/navbar_view', $data);
+        $this->load->view('user/edit_profile_view', $data);
+    }
+    public function processEdit($id)
+    {
+        //set validatio rules
+        $this->form_validation->set_rules('firstName', 'First Name', 'required');
+        $this->form_validation->set_rules('lastName', 'Last Name', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required');
+        $this->form_validation->set_rules('number', 'Number', 'required|numeric');
+        $this->form_validation->set_rules('birthday', 'Birthday', 'required');
+        $this->form_validation->set_rules('gender', 'Gender', 'required');
+        $this->form_validation->set_rules('address', 'Address', 'required');
+        //Run the form validation
+        if ($this->form_validation->run() == FALSE) {
+            $this->editProfile();
+        } else {
+            $data = array(
+                'firstname' => $this->input->post('firstName'),
+                'lastname' => $this->input->post('lastName'),
+                'email' => $this->input->post('email'),
+                'number' => $this->input->post('number'),
+                'birthday' => $this->input->post('birthday'),
+                'gender' => $this->input->post('gender'),
+                'address' => $this->input->post('address')
+            );
+            $this->user_model->editUser($id, $data);
+            $data['title'] = "Edit | User";
+            $data['active'] = "users";
+            $data['user'] = $this->user_model->getUserWithEmail($this->session->userdata('email'));
+            $this->load->view('include/header_view', $data);
+            $this->load->view('include/navbar_view', $data);
+            $this->load->view('user/edit_profile_success_view', $data);
+        }
     }
 }

@@ -9,11 +9,17 @@ class User_model extends CI_Model
         parent::__construct();
         $this->load->database();
     }
-    function getuser($email)
+    function getUserWithEmail($email)
     {
         $where = array('email' => $email);
         $query = $this->db->get_where('users', $where);
         $result = $query->row();
         return $result;
+    }
+    function editUser($id, $data)
+    {
+        $where = array('id' => $id);
+        $this->db->where($where);
+        $this->db->update('users', $data);
     }
 }
