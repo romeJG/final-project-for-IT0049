@@ -9,7 +9,7 @@ class Login extends CI_Controller
         parent::__construct();
         $this->load->helper(array('form', 'url'));
         $this->load->library(array('form_validation', 'session'));
-        $this->load->model('login_model');
+        $this->load->model(array('login_model', 'store_model'));
     }
     public function index()
     {
@@ -50,6 +50,9 @@ class Login extends CI_Controller
                 //sets the value to false cuz its a user
                 $this->session->set_userdata(array('isAdmin' => false));
                 $this->session->set_userdata(array('email' => $data['email']));
+                //gets the user's id using email then add it to session
+                $data['user'] = $this->store_model->getUserWithEmail($this->session->userdata('email'));
+                $this->session->set_userdata(array('id' => $data['user']->id));
                 redirect('');
             }
         }

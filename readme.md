@@ -33,13 +33,20 @@ Final Project for IT0049
 <br>
 <h2>❓ How to Use ❓</h2>
 <h4>Requirements ✔</h4>
-- XAMPP<br>
-- Browser<br>
-  <br>
+
+- XAMPP
+- Browser
+- Understanding on Database Importing
+<br>
 <h4>How to Install 💿</h4>
-- extract the zipfile in httdocs (if xampp)<br>
-- ps the path on the dir should be xampp/lukso/(all files)<br>
-- type localhost/lukso in browser<br>
+
+- Extract the zipfile in httdocs (if xampp) ps. the path on the dir should be xampp/lukso/
+- Open http://localhost/phpmyadmin/
+- Create a database named lukso_wands.
+- Import the sql file in the DB folder.
+- Type http://localhost/lukso/ in browser.
+- Admin Username: admin1@gmail.com 
+- Admin Password: password
 
 <br>
 <br>
@@ -212,6 +219,10 @@ Mr. Garick Ollivander, the owner of the Ollivander's Wands located in Diagon All
       <tr>
          <td>❌</td>
          <td>User Checkout cart</td>
+      </tr>
+      <tr>
+         <td>❌</td>
+         <td>Admin Orders</td>
       </tr>
       <tr>
          <td>🎉</td>

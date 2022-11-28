@@ -2,7 +2,7 @@
 <div class="body_container">
     <div class="row">
         <div class="display-3 font-weight-bold col-md best-sellers rounded" id="best-sellers">
-            Store
+            Your cart items
         </div>
     </div>
 
@@ -17,7 +17,7 @@
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $item->name; ?></h5>
                         <p class="card-text">€<?php echo $item->price; ?> </p>
-                        <a href="<?php echo base_url('Store/addToCart/') . $item->id; ?>" class="btn btn-primary">Add to cart</a>
+                        <a href="<?php echo base_url('cart/remove/') . $item->cart_item_id; ?>" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Remove</a>
                     </div>
                 </div>
 

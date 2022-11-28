@@ -24,6 +24,31 @@ class Store extends CI_Controller
     }
 
 
+
+    public function addToCart($itemID)
+    {
+        $data['title'] = "Success | Lukso";
+        $data['active'] = "store";
+        $this->load->view('include/header_view', $data);
+        $this->load->view('include/navbar_view', $data);
+
+        //shows feedback to user
+        $data['message'] = "Added To Cart!";
+        $this->load->view('success_view', $data);
+
+        $data['item'] = $this->store_model->getItem($itemID);
+        $name =
+            $userID = $this->session->userdata('id');
+        $data = array(
+            'name' => $data['item']->name,
+            'price' => $data['item']->price,
+            'image' => $data['item']->image,
+            'user_id' => $userID
+
+        );
+        $this->store_model->insertToCart($data);
+    }
+
     public function redirectIfSessExist()
     {
         //if no session it will not try to login.

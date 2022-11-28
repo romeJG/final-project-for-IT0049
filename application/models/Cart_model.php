@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Store_model extends CI_Model
+class Cart_model extends CI_Model
 {
 
     function __construct()
@@ -19,31 +19,11 @@ class Store_model extends CI_Model
     //  888    888 . 888    .o  888   888   888  o.  )88b       888          888   888   888   888  888   .o8   888 .  888  888   888  888   888  o.  )88b 
     // o888o   "888" `Y8bod8P' o888o o888o o888o 8""888P'      o888o         `V88V"V8P' o888o o888o `Y8bod8P'   "888" o888o `Y8bod8P' o888o o888o 8""888P' 
 
-
-    //gets the active items
-    public function getItems()
-    {
-        $where = array('is_active' => 1);
-        return $this->db->get_where('items', $where)->result();
-    }
-
     //gets the cart items
     public function getCartItems($user_id)
     {
         $where = array('user_id' => $user_id);
         return $this->db->get_where('cart', $where)->result();
-    }
-
-    public function getUserWithEmail($email)
-    {
-        $where = array('email' => $email);
-        $query = $this->db->get_where('users', $where);
-        $result = $query->row();
-        return $result;
-    }
-    public function insertToCart($data)
-    {
-        $this->db->insert('cart', $data);
     }
     public function getItem($id)
     {
@@ -51,5 +31,12 @@ class Store_model extends CI_Model
         $query = $this->db->get_where('items', $where);
         $result = $query->row();
         return $result;
+    }
+    public function deleteItemFromCart($cart_item_id)
+    {
+        //deletes the item that has the same cart_item id
+        $where = array('cart_item_id' => $cart_item_id);
+        $this->db->where($where);
+        $this->db->delete('cart');
     }
 }
