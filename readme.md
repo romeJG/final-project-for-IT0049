@@ -198,7 +198,7 @@ Mr. Garick Ollivander, the owner of the Ollivander's Wands located in Diagon All
          <td>User Change password</td>
       </tr>
       <tr>
-         <td>❌</td>
+         <td>✅</td>
          <td>Store Page (add pagination if possible)</td>
       </tr>
       <tr>

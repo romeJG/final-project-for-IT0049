@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Home extends CI_Controller
+class Store extends CI_Controller
 {
     public function __construct()
     {
@@ -9,18 +9,20 @@ class Home extends CI_Controller
         parent::__construct();
         $this->load->helper(array('form', 'url'));
         $this->load->library(array('form_validation', 'session'));
-        $this->load->model('login_model');
+        $this->load->model(array('store_model', 'login_model'));
     }
 
     public function index()
     {
         $this->redirectIfSessExist();
-        $data['title'] = "Lukso Wands";
-        $data['active'] = "home";
+        $data['title'] = "Store | Lukso";
+        $data['active'] = "store";
         $this->load->view('include/header_view', $data);
         $this->load->view('include/navbar_view', $data);
-        $this->load->view('home_view');
+        $data['items'] = $this->store_model->getItems();
+        $this->load->view('items_view', $data);
     }
+
 
     public function redirectIfSessExist()
     {
