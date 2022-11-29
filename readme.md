@@ -221,11 +221,11 @@ Mr. Garick Ollivander, the owner of the Ollivander's Wands located in Diagon All
          <td>Individual item view</td>
       </tr>
       <tr>
-         <td>❌</td>
+         <td>✅</td>
          <td>User Checkout cart</td>
       </tr>
       <!-- <tr>
-         <td>❌</td>
+         <td>✅</td>
          <td>Admin Orders</td>
       </tr> -->
       <tr>
