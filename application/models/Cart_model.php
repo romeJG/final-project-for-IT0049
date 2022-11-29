@@ -39,4 +39,14 @@ class Cart_model extends CI_Model
         $this->db->where($where);
         $this->db->delete('cart');
     }
+    public function deleteAllCart($user_id)
+    {
+        $where = array('user_id' => $user_id);
+        $this->db->where($where);
+        $this->db->delete('cart');
+    }
+    public function insertOrder($data)
+    {
+        $this->db->insert('orders', $data);
+    }
 }

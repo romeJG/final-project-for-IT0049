@@ -20,6 +20,11 @@ class Cart extends CI_Controller
         $this->load->view('include/header_view', $data);
         $this->load->view('include/navbar_view', $data);
         $data['items'] = $this->cart_model->getCartItems($this->session->userdata('id'));
+        $data['total'] = 0.00;
+        foreach ($data['items'] as $item) {
+            $data['total'] += $item->price;
+        }
+        $this->session->set_userdata(array('total' => $data['total']));
         $this->load->view('user/cart_items_view', $data);
     }
 
@@ -44,5 +49,53 @@ class Cart extends CI_Controller
         $data['message'] = "Removed From Cart!";
         $this->load->view('success_view', $data);
         $this->cart_model->deleteItemFromCart($cart_item_id);
+    }
+    public function removeAll($userID)
+    {
+        $data['title'] = "Done | Lukso";
+        $data['active'] = "store";
+        $this->load->view('include/header_view', $data);
+        $this->load->view('include/navbar_view', $data);
+        //shows feedback to user
+        $data['message'] = "Removed All From Cart!";
+        $this->load->view('success_view', $data);
+        $this->cart_model->deleteAllCart($userID);
+    }
+
+
+    public function checkout()
+    {
+        $data['title'] = "Done | Lukso";
+        $data['active'] = "store";
+        $this->load->view('include/header_view', $data);
+        $this->load->view('include/navbar_view', $data);
+        $data['items'] = $this->cart_model->getCartItems($this->session->userdata('id'));
+        $data['total'] = 0.00;
+        foreach ($data['items'] as $item) {
+            $data['total'] += $item->price;
+        }
+        $this->load->view('user/checkout_view', $data);
+    }
+    public function confirmCheckout()
+    {
+        $order_id = mt_rand(100000, 999999);
+        $data['items'] = $this->cart_model->getCartItems($this->session->userdata('id'));
+        foreach ($data['items'] as $item) {
+            $order = array(
+                'order_id' => $order_id,
+                'item_name' => $item->name,
+                'user_id' => $this->session->userdata('id'),
+                'address' => $this->input->post('address'),
+            );
+            $this->cart_model->insertOrder($order);
+        }
+        $this->cart_model->deleteAllCart($this->session->userdata('id'));
+        $data['title'] = "Done | Lukso";
+        $data['active'] = "store";
+        $this->load->view('include/header_view', $data);
+        $this->load->view('include/navbar_view', $data);
+        //shows feedback to user
+        $data['message'] = "Order Successful";
+        $this->load->view('success_view', $data);
     }
 }

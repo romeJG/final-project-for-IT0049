@@ -37,7 +37,7 @@ class Admin extends CI_Controller
     }
 
 
-    //     .o.             .o8                     o8o                   oooooooooooo                                       .    o8o                                 
+    //      .o.             .o8                     o8o                   oooooooooooo                                       .    o8o                                 
     //     .888.           "888                     `"'                   `888'     `8                                     .o8    `"'                                 
     //    .8"888.      .oooo888  ooo. .oo.  .oo.   oooo  ooo. .oo.         888         oooo  oooo  ooo. .oo.    .ooooo.  .o888oo oooo   .ooooo.  ooo. .oo.    .oooo.o 
     //   .8' `888.    d88' `888  `888P"Y88bP"Y88b  `888  `888P"Y88b        888oooo8    `888  `888  `888P"Y88b  d88' `"Y8   888   `888  d88' `88b `888P"Y88b  d88(  "8 
@@ -341,5 +341,42 @@ class Admin extends CI_Controller
         //delete the data
         $this->admin_model->deleteItem($id);
         $this->items("all");
+    }
+
+
+    //     .oooooo.                  .o8                          oooooooooooo                                       .    o8o                                 
+    //     d8P'  `Y8b                "888                          `888'     `8                                     .o8    `"'                                 
+    //    888      888 oooo d8b  .oooo888   .ooooo.  oooo d8b       888         oooo  oooo  ooo. .oo.    .ooooo.  .o888oo oooo   .ooooo.  ooo. .oo.    .oooo.o 
+    //    888      888 `888""8P d88' `888  d88' `88b `888""8P       888oooo8    `888  `888  `888P"Y88b  d88' `"Y8   888   `888  d88' `88b `888P"Y88b  d88(  "8 
+    //    888      888  888     888   888  888ooo888  888           888    "     888   888   888   888  888         888    888  888   888  888   888  `"Y88b.  
+    //    `88b    d88'  888     888   888  888    .o  888           888          888   888   888   888  888   .o8   888 .  888  888   888  888   888  o.  )88b 
+    //     `Y8bood8P'  d888b    `Y8bod88P" `Y8bod8P' d888b         o888o         `V88V"V8P' o888o o888o `Y8bod8P'   "888" o888o `Y8bod8P' o888o o888o 8""888P' 
+
+    public function order($show)
+    {
+        $data['title'] = "View Orders | Admin";
+        $data['active'] = "orders";
+        $data['items'] = $this->admin_model->getOrders($show);
+        $this->load->view('admin/admin_header_view', $data);
+        $this->load->view('admin/include/admin_nav_view', $data);
+        $this->load->view('admin/admin_orders_view', $data);
+    }
+    public function searchOrder()
+    {
+        $value = $this->input->post('search');
+        if (!($this->input->post('search'))) {
+            $value = "all";
+        }
+        $this->order($value);
+    }
+    public function completeOrder($order_id)
+    {
+        $this->admin_model->deleteOrder($order_id);
+        $this->order("all");
+    }
+    public function cancelOrder($order_id)
+    {
+        $this->admin_model->deleteOrder($order_id);
+        $this->order("all");
     }
 }

@@ -129,4 +129,32 @@ class Admin_model extends CI_Model
         $this->db->where($where);
         $this->db->delete('items');
     }
+
+
+
+    //     .oooooo.                  .o8                          oooooooooooo                                       .    o8o                                 
+    //     d8P'  `Y8b                "888                          `888'     `8                                     .o8    `"'                                 
+    //    888      888 oooo d8b  .oooo888   .ooooo.  oooo d8b       888         oooo  oooo  ooo. .oo.    .ooooo.  .o888oo oooo   .ooooo.  ooo. .oo.    .oooo.o 
+    //    888      888 `888""8P d88' `888  d88' `88b `888""8P       888oooo8    `888  `888  `888P"Y88b  d88' `"Y8   888   `888  d88' `88b `888P"Y88b  d88(  "8 
+    //    888      888  888     888   888  888ooo888  888           888    "     888   888   888   888  888         888    888  888   888  888   888  `"Y88b.  
+    //    `88b    d88'  888     888   888  888    .o  888           888          888   888   888   888  888   .o8   888 .  888  888   888  888   888  o.  )88b 
+    //     `Y8bood8P'  d888b    `Y8bod88P" `Y8bod8P' d888b         o888o         `V88V"V8P' o888o o888o `Y8bod8P'   "888" o888o `Y8bod8P' o888o o888o 8""888P' 
+
+    //gets the full table
+    public function getOrders($show)
+    {
+        if ($show == "all") {
+            return $this->db->get('orders')->result();
+        } else {
+            $where = array('order_id' => $show);
+            return $this->db->get_where('orders', $where)->result();
+        }
+    }
+    public function deleteOrder($order_id)
+    {
+        //deletes the item that has the id $id
+        $where = array('order_id' => $order_id);
+        $this->db->where($where);
+        $this->db->delete('orders');
+    }
 }

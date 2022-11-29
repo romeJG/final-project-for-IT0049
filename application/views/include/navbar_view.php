@@ -22,12 +22,7 @@
                         About us
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" target="_blank" href="https://github.com/romeJG/lukso">What is this?</a></li>
-                        <li><a class="dropdown-item" href="#">ewan ko po</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://github.com/romeJG/lukso#final-project-for-it0049">What is this?</a></li>
                     </ul>
                 </li>
                 <!-- <li class="nav-item">
