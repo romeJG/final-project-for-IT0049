@@ -80,7 +80,6 @@ class Admin extends CI_Controller
 
 
 
-
     //view the user's info via id in the URL
     public function viewUser($id)
     {
