@@ -44,7 +44,7 @@ Final Project for IT0049
 - Extract the zipfile in httdocs (if xampp) ps. the path on the dir should be xampp/lukso/
 - Open http://localhost/phpmyadmin/
 - Create a database named lukso_wands.
-- Import the sql file in the DB folder.
+- Import the sql file from the DB folder.
 - Type http://localhost/lukso/ in browser.
 - Admin Username: admin1@gmail.com 
 - Admin Password: password
