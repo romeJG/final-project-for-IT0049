@@ -40,7 +40,7 @@ Final Project for IT0049
 <br>
 <h4>How to Install 💿</h4>
 
-- Download the zip file or clone it press the green code button.
+- [Download](https://github.com/romeJG/lukso/archive/refs/heads/main.zip) the zip file or clone it press the green code button.
 - Extract the zipfile in httdocs (if xampp) ps. the path on the dir should be xampp/lukso/
 - Open http://localhost/phpmyadmin/
 - Create a database named lukso_wands.
