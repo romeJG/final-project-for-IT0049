@@ -1,5 +1,5 @@
 <?php
-//hello world
+
 /**
  * CodeIgniter
  *
