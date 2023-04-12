@@ -58,6 +58,7 @@ class Login extends CI_Controller
         }
     }
 
+    //this is used in the callback ini form validations in processLogin()
     public function login()
     {
         $data = array(
