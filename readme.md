@@ -1,9 +1,6 @@
 <h1>
-First Project for IT0049
+Lukso
 </h1>
-<br>
-<br>
-<br>
 <br>
 <h2>❓ How to Use ❓</h2>
 <h4>Requirements ✔</h4>
