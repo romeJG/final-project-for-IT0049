@@ -3,32 +3,6 @@ First Project for IT0049
 </h1>
 <br>
 <br>
-<table>
-   <thead>
-      <tr>
-         <th>👷🏾‍♂️ Members 👷🏾‍♂️</th>
-         <th>Role</th>
-      </tr>
-   </thead>
-   <tbody>
-      <tr>
-         <td>Guillermo, Justine Rome</td>
-         <td>Leader / Developer (Front/Back)</td>
-      </tr>
-      <tr>
-         <td>Espero, Jessielyn Doris</td>
-         <td>Member / Quality Assurance</td>
-      </tr>
-      <tr>
-         <td>Que, Joseph Ross</td>
-         <td>Member / Designer</td>
-      </tr>
-      <tr>
-         <td>Valmadrid, Genome Jacob</td>
-         <td>Member / Designer</td>
-      </tr>
-   </tbody>
-</table>
 <br>
 <br>
 <h2>❓ How to Use ❓</h2>
